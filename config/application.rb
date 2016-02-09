@@ -22,5 +22,21 @@ module Taskit
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # lib配下のライブラリを読み込む
+    config.autoload_paths += %W(#{config.root}/lib)
+    # service配下のライブラリを読み込む
+    config.autoload_paths += %W(#{config.root}/app/services)
+
+    # Glyphicons設定
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
+    config.generators do |g|
+      g.stylesheets false
+      g.javascripts false
+      g.helper false
+      g.template_engine :erb
+      g.test_framework false
+      g.fixture_replacement false
+    end
   end
 end
