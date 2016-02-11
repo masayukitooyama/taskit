@@ -1,0 +1,14 @@
+SECRET_KEY_BASE=dafaj0fajw0efadfaj230fajdfa23r
+RAILS_ENV=development
+APP_URL=http://localhost:8080
+APP_API_URL=http://localhost:3000
+APP_RES_URL=
+DATABASE_HOST=127.0.0.1
+DATABASE_USERNAME=masayuki
+DATABASE_PASSWORD=masayuki0127
+DATABASE_PORT=3306
+SMTP_ADDRESS=smtp.gmail.com
+SMTP_PORT=587
+MAIL_DOMAIN=smtp.gmail.com
+MAIL_USER_NAME=masayama0127@gmail.com
+MAIL_PASSWORD=masa0127
