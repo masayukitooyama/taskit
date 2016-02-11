@@ -1,5 +1,5 @@
 worker_processes 1
-app_path = "/var/www/projectPATH"
+app_path = "/var/www/taskit"
 listen "#{app_path}/tmp/sockets/unicorn.sock"
 pid "#{app_path}/tmp/pids/unicorn.pid"
 #何秒でタイムアウトするか
