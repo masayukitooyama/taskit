@@ -34,6 +34,7 @@ gem 'seed-fu'
 # プログレスバー
 gem 'nprogress-rails'
 
+
 #------------------
 # infra
 #------------------

@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        name: 社員名
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード(確認)
+        user_number: 社員番号
+        authority_type: 権限
+        job_type: 職種
+        sex: 性別
+        memo: 特徴

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     :registrations => 'users/registrations',
     :sessions => 'users/sessions',
     :invitations => 'users/invitations'
-  }
+  },path_names: { sign_in: "login", sign_out: "logout"}
 
   # 質問
   resources :questions
