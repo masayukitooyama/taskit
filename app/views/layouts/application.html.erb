@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Taskit</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+  <%= render '/layouts/application_header' %>
 </head>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
 <body>
+  <%= render '/layouts/application_nav' %>
+  <div class="wrapper">
+    <div class="body">
+      <%= render '/layouts/application_sidebar' %>
 
-<%= yield %>
+      <section class="content">
+          <div class="header">
+            <div class="col-md-12">
+              <h3 class="header-title"><%= yield(:header_title) %></h3>
+              <p class="header-info"><%= yield(:header_info) %></p>
+            </div>
+          </div>
 
+          <div class="main-content">
+            <%= yield %>
+          </div>
+        </section>
+    </div>
+  </div>
 </body>
 </html>

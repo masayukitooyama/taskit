@@ -1,0 +1,28 @@
+<% if user_signed_in? %>
+<div class="navbar navbar-default navbar-static-top navbar-main" role="navigation">
+  <div class="navbar-header">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      課題管理システムTaskit
+    <% end %>
+    <div class="nav navbar-nav navbar-right">
+      <div class="nav navbar-nav navbar-text">
+        <%= link_to destroy_user_session_path, method: :delete do %>
+          <i class="fa fa-sign-out"></i>ログアウト
+        <% end %>
+      </div>
+      <div class="nav navbar-nav navbar-text">
+        <p>社員番号：<%= current_user.user_number %></p>
+      </div>
+      <div class="nav navbar-nav navbar-text">
+        <p>職種：<%= jp_job_type(current_user.job_type) %></p>
+      </div>
+      <div class="nav navbar-nav navbar-text">
+        <p>氏名：<%= current_user.name %></p>
+      </div>
+      <div class="nav navbar-nav navbar-text">
+        <p>権限：<%= jp_authority_type(current_user.authority_type) %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
