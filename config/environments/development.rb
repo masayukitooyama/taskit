@@ -36,6 +36,8 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+  # mailer settings
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.smtp_settings = {
     :address   => ENV['SMTP_ADDRESS'],
     :port      => ENV['SMTP_PORT'],

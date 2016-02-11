@@ -27,9 +27,10 @@ module Taskit
     config.autoload_paths += %W(#{config.root}/lib)
     # service配下のライブラリを読み込む
     config.autoload_paths += %W(#{config.root}/app/services)
-    
+
     # Glyphicons設定
     config.assets.paths << "#{Rails}/vendor/assets/fonts"
+
     config.generators do |g|
       g.stylesheets false
       g.javascripts false
