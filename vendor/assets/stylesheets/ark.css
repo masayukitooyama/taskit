@@ -1057,7 +1057,7 @@ a.list-group-item:focus {
  * Main navigation
  */
 .navbar-default.navbar-main {
-  background-color: #ffffff;
+  /*background-color: #ffffff;*/
   border-bottom: solid 1px #f7f7f7;
   margin: 0 0 0 0;
 }

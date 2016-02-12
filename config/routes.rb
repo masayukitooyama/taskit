@@ -15,6 +15,9 @@ Rails.application.routes.draw do
   # 問題
   resources :tasks
 
+  # 利用者
+  get 'users' => 'users#index'
+
 
   namespace :api do
     resources :questions

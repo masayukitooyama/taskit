@@ -1,5 +1,21 @@
 <% if user_signed_in? %>
-
-
-
+<aside class="sidebar">
+  <ul class="nav nav-stacked">
+    <li>
+      <%= link_to tasks_path do %>
+        <i class="fa  fa-book"></i>課題一覧
+      <% end %>
+    </li>
+    <li>
+      <%= link_to users_path do %>
+        <i class="fa  fa-male"></i>利用者一覧
+      <% end %>
+    </li>
+    <li>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="fa fa-sign-out"></i>ログアウト
+      <% end %>
+    </li>
+  </ul>
+</aside>
 <% end %>

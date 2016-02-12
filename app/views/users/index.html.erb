@@ -1,0 +1,26 @@
+<table class="users_list">
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th>メールアドレス</th>
+      <th>権限</th>
+      <th>job_type</th>
+      <th>memo</th>
+      <th colspan="1"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr >
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= jp_authority_type(user.authority_type) %></td>
+        <td><%= jp_job_type(user.job_type) %></td>
+        <td>
+          <%= user.memo %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

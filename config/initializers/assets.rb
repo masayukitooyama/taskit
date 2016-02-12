@@ -15,3 +15,18 @@ end
 Dir.glob("vendor/assets/stylesheets/*.css").each do |name|
   Rails.application.config.assets.precompile << File.basename(name)
 end
+Dir.glob("vendor/assets/fonts/*.eot").each do |name|
+  Rails.application.config.assets.precompile << File.basename(name)
+end
+Dir.glob("vendor/assets/fonts/*.svg").each do |name|
+  Rails.application.config.assets.precompile << File.basename(name)
+end
+Dir.glob("vendor/assets/fonts/*.ttf").each do |name|
+  Rails.application.config.assets.precompile << File.basename(name)
+end
+Dir.glob("vendor/assets/fonts/*.woff").each do |name|
+  Rails.application.config.assets.precompile << File.basename(name)
+end
+Dir.glob("vendor/assets/fonts/*.woff2").each do |name|
+  Rails.application.config.assets.precompile << File.basename(name)
+end

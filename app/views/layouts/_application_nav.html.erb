@@ -4,7 +4,6 @@
     <%= link_to root_path, class: "navbar-brand" do %>
       課題管理システムTaskit
     <% end %>
-    <div class="nav navbar-nav navbar-right">
       <div class="nav navbar-nav navbar-text">
         <%= link_to destroy_user_session_path, method: :delete do %>
           <i class="fa fa-sign-out"></i>ログアウト
@@ -23,6 +22,5 @@
         <p>権限：<%= jp_authority_type(current_user.authority_type) %></p>
       </div>
     </div>
-  </div>
 </div>
 <% end %>
