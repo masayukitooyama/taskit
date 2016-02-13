@@ -11,3 +11,12 @@ ja:
         job_type: 職種
         sex: 性別
         memo: 特徴
+      task:
+        title: 課題タイトル
+        content: 内容
+        end_time: 期限
+        created_at: 作成日付
+        updateded_at: 更新日付
+      report:
+        title: タイトル
+        body:  本文

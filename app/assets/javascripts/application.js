@@ -21,6 +21,7 @@
 //= require jasny-bootstrap.min.js
 //= require jquery.autosize.min.js
 //= require moment.min.js
+//= require morris.js
 //= require daterangepicker.js
 //= require bootstrap-datepicker.js
 //= require dropzone.min.js
@@ -35,6 +36,4 @@
 //= require ui-bootstrap.min.js
 //= require nprogress
 //= require nprogress-turbolinks
-//= require util/date_util
-//= require util/time_util
 //= require_tree .

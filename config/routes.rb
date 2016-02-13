@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :reports
+  resources :news
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
     :sessions => 'users/sessions',
@@ -15,9 +17,13 @@ Rails.application.routes.draw do
   # 問題
   resources :tasks
 
-  # 利用者
-  get 'users' => 'users#index'
+  resources :users
 
+  # アカウント編集画面
+  get 'profile' => 'user_profile#edit', as: :get_profile
+
+  # アカウント更新
+  put 'profile' => 'user_profile#update', as: :update_profile
 
   namespace :api do
     resources :questions

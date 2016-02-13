@@ -1,9 +1,9 @@
-<% if user_signed_in? %>
 <div class="navbar navbar-default navbar-static-top navbar-main" role="navigation">
   <div class="navbar-header">
     <%= link_to root_path, class: "navbar-brand" do %>
       課題管理システムTaskit
     <% end %>
+    <% if user_signed_in? %>
       <div class="nav navbar-nav navbar-text">
         <%= link_to destroy_user_session_path, method: :delete do %>
           <i class="fa fa-sign-out"></i>ログアウト
@@ -21,6 +21,6 @@
       <div class="nav navbar-nav navbar-text">
         <p>権限：<%= jp_authority_type(current_user.authority_type) %></p>
       </div>
-    </div>
+    <% end %>
+  </div>
 </div>
-<% end %>
