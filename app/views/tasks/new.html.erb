@@ -1,5 +1,44 @@
-<h1>New Task</h1>
+<% provide(:header_title, "課題新規登録") %>
 
-<%= render 'form' %>
+<%= form_for(@task) do |f| %>
+  <div class="panel-body form-horizontal">
+    <div class="form-group">
+      <%= f.label :category, class: "col-sm-2 control-label" %>
+      <div class="col-sm-2">
+        <div class="select-form">
+          <%= f.collection_select :category_id, Category.all, :id, :name, {}, class: "form-control", autofocus: true %>
+        </div>
+      </div>
+    </div>
 
-<%= link_to 'Back', tasks_path %>
+    <div class="form-group">
+      <%= f.label :title, class: "col-sm-2 control-label" %>
+      <div class="col-sm-2">
+        <%= f.text_field :title, class:"form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :content, class: "col-sm-2 control-label" %>
+      <div class="col-sm-2">
+        <%= f.text_field :content, class:"form-control" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :end_time, class: "col-sm-2 control-label" %>
+      <div class="col-sm-2">
+        <%= f.text_field :end_time, class:"form-control" %>
+      </div>
+    </div>
+
+  </div>
+
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-6">
+      <%= link_to '戻る', tasks_path, class: "btn btn-warning" %>
+      <%= f.submit "登録", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

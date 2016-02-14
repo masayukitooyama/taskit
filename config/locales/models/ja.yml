@@ -17,6 +17,9 @@ ja:
         end_time: 期限
         created_at: 作成日付
         updateded_at: 更新日付
+        category: 課題種別
       report:
         title: タイトル
         body:  本文
+      category:
+        name: 種別名

@@ -1,20 +1,18 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Categories</h1>
+<% provide(:header_title, "課題種別一覧") %>
 
 <table>
   <thead>
     <tr>
-      <th colspan="3"></th>
+      <th colspan="3">No</th>
+      <th colspan="3">課題種別</th>
     </tr>
   </thead>
 
   <tbody>
     <% @categories.each do |category| %>
       <tr>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td colspan="3"><%= category.id %></td>
+        <td colspan="3"><%= category.name %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +20,4 @@
 
 <br>
 
-<%= link_to 'New Category', new_category_path %>
+<%= link_to '新規登録', new_category_path, class: "btn btn-primary" %>
