@@ -1,4 +1,6 @@
 <% provide(:header_title, "お知らせ一覧") %>
+
+<% if @reports.present? %>
 <table>
   <thead>
     <tr>
@@ -7,7 +9,7 @@
   </thead>
 
   <tbody>
-    <% if @reports.present? %>
+
       <% @reports.each do |report| %>
         <tr>
           <td><%= report.title %></td>
@@ -17,6 +19,6 @@
       <div class="">
         お知らせはありません
       </div>
-    <% end %>
   </tbody>
 </table>
+<% end %>

@@ -1,5 +1,5 @@
 <% provide(:header_title, "課題種別一覧") %>
-
+<% if @categories.present? %>
 <table>
   <thead>
     <tr>
@@ -14,9 +14,13 @@
         <td colspan="3"><%= category.id %></td>
         <td colspan="3"><%= category.name %></td>
       </tr>
-    <% end %>
   </tbody>
 </table>
+<% else %>
+  <div class="col-sm-12">
+    <p>対象の課題種別は１件もありません。</p>
+  </div>
+<% end %>
 
 <br>
 

@@ -12,15 +12,24 @@
     <tbody>
       <% @tasks.each do |task| %>
         <tr>
-          <td><%= task.title %></td>
-          <td><%= task.content %></td>
-          <td><%= task.end_time %></td>
+          <td class="task_title">
+            <%= task.title %>
+          </td>
+          <td class="content">
+            <%= task.content %>
+          </td>
+          <td class="end_tiem">
+            <%= task.end_time %>
+          </td>
+          <td><%= link_to '詳細', task%></td>
         </tr>
       <% end %>
     </tbody>
   </table>
   <% else %>
-  課題はありません
+  <div class="col-sm-12">
+    <p>課題はありません。</p>
+  </div>
   <% end %>
 </div>
 

@@ -1,4 +1,19 @@
-<p id="notice"><%= notice %></p>
+<% provide(:header_title, "#{@task.title}の詳細") %>
 
-<%= link_to 'Edit', edit_task_path(@task) %> |
-<%= link_to 'Back', tasks_path %>
+  <table>
+    <thead>
+      <tr>
+        <td>課題種別名</td>
+        <td>タイトル</td>
+        <td>内容</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td><%= @task.category.name %></td>
+        <td><%= @task.title %></td>
+        <td><%= @task.content %></td>
+      </tr>
+    </tbody>
+  </table>
